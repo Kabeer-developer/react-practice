@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Fetch() {
 
@@ -26,14 +26,14 @@ function Fetch() {
     },
         []);
 
-        if(loading) return <div>Loading...</div>
-        if(error) return <div>error : {error}</div>
+    if (loading) return <div>Loading...</div>
+    if (error) return <div>error : {error}</div>
 
-        return(<div>
-            {users.map((user)=> {
-                return <div key={user.id}>{user.name}</div>
-            })}
-        </div>)
+    return (<div>
+        {users.map((user) => {
+            return <div key={user.id}>{user.name}</div>
+        })}
+    </div>)
 }
 
 

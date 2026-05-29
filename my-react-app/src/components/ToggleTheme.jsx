@@ -1,24 +1,22 @@
 import { useState } from "react";
 
 function Toggle(){
-    const [isDark,setIsdark] = useState(false);
-
-    const lightTheme = {
-        backgroundColor: "white",
-        color:"black"
-    }
+    const [isDark,setIsDark] = useState(false);
 
     const darkTheme = {
         backgroundColor:"black",
         color:"white",
     }
 
-    return(
-        <div style={{...(isDark ? darkTheme :lightTheme),minHeight:"100vh"}}>
-            <p>Hello this content changes theme changes with respect to theme</p>
-            <button onClick={()=> setIsdark(!isDark)}>{isDark?"light theme":"dark theme"}</button>
-        </div>
-    )
+    const lightTheme = {
+        backgroundColor:"white",
+        color:"black",
+    }
+
+   return(<div style={{...isDark?darkTheme:lightTheme,minHeight:"100vh"}}>
+    <p>Hello</p>
+    <button onClick={(e)=> setIsDark(!isDark)}>{isDark?"Light Theme":"Dark Theme"}</button>
+   </div>)
 }
 
 export default Toggle;

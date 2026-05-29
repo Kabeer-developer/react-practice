@@ -5,25 +5,26 @@ function LoginForm(){
     const password = "1234";
     const [user,setUser] = useState("");
     const [pass,setPass] = useState("");
-    const [message,setMessage] = useState("");
+    const [message,setMessage] = useState("Please Login");
 
   function handleSubmit(e){
-    e.preventDefault();
-      if(userId==user && password==pass){
-        setMessage("Login succesfull")
-    } else {
-        setMessage("Check Credentials again")
-    }
+     e.preventDefault();
+     if(userId==user && password==pass){
+      setMessage("Login Succesfull");
+     } else {
+      setMessage("Please Check Credencials");
+     }
+
   }
 
     return(
         <div>
-        <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <input type="text" value={user} onChange={(e)=> setUser(e.target.value)}></input>
-            <input type="text" value={pass} onChange={(e)=> setPass(e.target.value)}></input>
-            <button type="submit">Login</button>
-        </form>
-        <div>{message}</div>
+            <input type="password" value={pass} onChange={(e)=> setPass(e.target.value)}></input>
+            <button type="submit">Submit</button>
+          </form>
+          <p>{message}</p>
         </div>
     )
 }

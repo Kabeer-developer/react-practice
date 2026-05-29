@@ -4,15 +4,13 @@ export default function Counter1(){
 const [count,setCount]=useState(0);
 
 useEffect(()=> {
+    console.log("This is a Count Program")
+},[]);
+useEffect(()=> {
     console.log("Count updated")
 });
-
 useEffect(()=> {
-    console.log("count program created")
-},[]);
-
-useEffect(()=> {
-    console.log("count incremented");
+    console.log(count);
 },[count]);
 
 function update(){

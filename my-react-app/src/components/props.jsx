@@ -1,8 +1,8 @@
 
 function Props(props){
-    return(<>
-    <h1>Student name is {props.name}</h1>
-            </>)
+   return(
+    (props.isLogged ? <h2>Welcome</h2> : <h2>Please Login</h2>)
+   )
 }
 
 export default Props;

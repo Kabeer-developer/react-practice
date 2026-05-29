@@ -3,16 +3,18 @@ import { useState } from "react";
 function Counter(){
     const [count,setCount] = useState(0);
 
-    function increment(){
+    function Increment(){
         setCount(c=> c+1);
     }
 
-    return(
-        <div>
-            <h1>Count is {count}</h1>
-            <button onClick={increment}>Increment</button>
-        </div>
-    )
+    function Decrement(){
+        setCount(c=>c-1)
+    }
+    return(<>
+    <h1>Counter is {count}</h1>
+    <button onClick={()=>Decrement()}>Decrement</button>
+    <button onClick={()=>Increment()}>Increment</button>
+    </>);
 }
 
 export default Counter;
