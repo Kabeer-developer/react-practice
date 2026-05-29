@@ -13,7 +13,11 @@ function Todo(){
     function delTodo(index){
        setTodo(todos.filter((_,i)=> i !== index));
     }
-   
+    
+    function updTodo(index){
+        const temp = todos.filter((_,i)=> i==index);
+        
+    }
 
    
 
