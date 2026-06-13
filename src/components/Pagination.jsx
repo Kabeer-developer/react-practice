@@ -18,7 +18,7 @@ function Pagination(){
         return <li key={i}>{item}</li>
        })}</ul>
        <div>
-        <button onClick={()=> setCurrentpage(currentPage-1)} disabled={currentPage==1}>Previous</button>
+        <button disabled={currentPage==1} onClick={()=> setCurrentpage(currentPage-1)} >Previous</button>
         <p>{currentPage} of {totalPage}</p>
         <button  onClick={()=> setCurrentpage(currentPage+1)} disabled={currentPage==totalPage}>Next</button>
        </div>
