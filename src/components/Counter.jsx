@@ -18,9 +18,10 @@ function Counter() {
     }
   return (
     <div>
-      <h1>Counter</h1>
+      <h1>COUNTER</h1>
       <h3>{count}</h3>
       <button onClick={()=> Decrement()}>Decrement</button>
+      
       <button onClick={()=> reset()}>Reset</button>
       <button onClick={()=> Increment()}>Increment</button>
     </div>
