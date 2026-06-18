@@ -20,21 +20,14 @@ export default function FAQ() {
 
   return (
     <div>
-      {faqs.map((faq, index) => (
-        <div key={index}>
-          <button
-            onClick={() =>
-              setOpenIndex(openIndex === index ? null : index)
-            }
-          >
-            {faq.question}
-          </button>
-
-          {openIndex === index && (
-            <p>{faq.answer}</p>
-          )}
-        </div>
-      ))}
+     {faqs.map((faq,index)=> {
+      return <div key={index}>
+        <button onClick={()=> setOpenIndex(openIndex===index ? null : index)}>{faq.question}</button>
+        {openIndex === index && (
+          <p>{faq.answer}</p>
+        )}
+      </div>
+     })}
     </div>
   );
 }
