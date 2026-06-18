@@ -5,7 +5,7 @@ function SearchFilter(){
     const items = ["pineapple","Apple","Banana","Papaya","Pineapple"];
 
     const filtered = items.filter((i)=> i.toLowerCase().includes(search.trim().toLowerCase()));
-    
+
     return(
         <div>
             <input type="text" onChange={(e)=> setSearch(e.target.value)}></input>
