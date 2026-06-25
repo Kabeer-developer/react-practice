@@ -16,18 +16,16 @@ export default function FAQ() {
     }
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [isVisibleIndex,setIsVisibleIndex] = useState(null);
 
-  return (
+  return(
     <div>
-     {faqs.map((faq,index)=> {
-      return <div key={index}>
-        <button onClick={()=> setOpenIndex(openIndex===index ? null : index)}>{faq.question}</button>
-        {openIndex === index && (
-          <p>{faq.answer}</p>
-        )}
-      </div>
-     })}
+      {faqs.map((faq,index)=> {
+        return <div key={index}>
+          <p onClick={()=> setIsVisibleIndex(isVisibleIndex==index?null:index)}>{faq.question}</p>
+          <p style={{display: isVisibleIndex==index?"block":"none"}}>{faq.answer}</p>
+        </div>
+      })}
     </div>
-  );
+  )
 }
