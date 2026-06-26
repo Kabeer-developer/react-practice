@@ -5,11 +5,11 @@ function Debounce(){
 
     useEffect(()=> {
         const timer = setTimeout(() => {
-           if(query){
-            console.log("searching",query);
-           }
+            if(query){
+            console.log("searching for "+query);
+            }
         }, 1000);
-       return ()=> clearTimeout(timer);
+       return ()=>clearTimeout(timer);
     },[query]);
 return(<>
     <input type="text" value={query} onChange={(e)=> setQuery(e.target.value)} placeholder="Search.."></input>
