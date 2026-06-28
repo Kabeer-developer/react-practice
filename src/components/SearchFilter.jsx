@@ -8,10 +8,9 @@ function SearchFilter(){
 
     return(
         <div>
-            <input type="text" onChange={(e)=> setSearch(e.target.value)}></input>
-            {filtered.map((item,index)=> {
-                return <li key={index}>{item}</li>
-            })}
+           <input placeholder="Search" onChange={(e)=> setSearch(e.target.value)} value={search}></input>
+           {filtered.map((item,i)=>
+        <li key={i}>{item}</li>)}
         </div>
     )
 }
